@@ -23,9 +23,6 @@ io.sockets.on('connection', function (socket) {
       socket.emit('update', { date: Date().toString() });
     }, 3000);
   });
-  socket.on('disconnect', function (socket) {
-    socket.emit('message', { message: 'bye!!'})
-  });
 });
 
 
