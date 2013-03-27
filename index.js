@@ -1,5 +1,5 @@
 $(function(){
-  var socket = io.connect('//localhost');
+  var socket = io.connect('//' + window.location.host);
   socket.on('update', function (data) {
     console.log(data.date);
     socket.emit('update', {});
